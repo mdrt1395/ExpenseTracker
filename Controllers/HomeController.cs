@@ -18,9 +18,22 @@ namespace ExpenseTracker.Controllers
             return View();
         }
 
+        public IActionResult Expenses()
+        {
+            return View();
+        }
+
+        public IActionResult CreateEditExpense()
+        { return View(); }
+
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult CreateEditExpenseForm(Expense model) 
+        {
+            return RedirectToAction("Expenses"); 
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
